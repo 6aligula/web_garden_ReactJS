@@ -1,26 +1,66 @@
 import React from 'react'
-import clorador from '../img/clorador.jpg'
+import './styles/Products.css'
+import circleImg from '../img/circles.png'
 
-export default function Products() {
-    return (
-        
-        <div className="row featurette">
-            
-            <br></br>
-            <hr></hr>
-            <div className="col-md-7">
-                <h2 className="featurette-heading">Clorador salino <span className="text-muted">El mas poderoso.</span></h2>
-                <p className="lead">Olvidate de comprar mas cloro</p>
+class Products extends React.Component {
+    // constructor(props){
+    //     super(props)
+    //     this.state={
+    //         image:'https://firebasestorage.googleapis.com/v0/b/web-papa-de84a.appspot.com/o/clorador.jpg?alt=media&token=b80df9d7-7e16-4b37-a6b6-4d8c0d2c93d1'
+    //     }
+    // }
+    /* This function is build just after someone component is built. This is the best moment for call APIs */
+    // componentDidMount(){
+    //     setTimeout(() => {
+    //         this.setState({
+    //             image: ''
+    //         })
 
+    //     }, 5000)
+    // }
+
+    render() {
+        /*shorcut KEY=this.props.KEY*/
+        const {
+            title,
+            subtitle,
+            description,
+            img,
+            leftColor,
+            rigthColor } = this.props
+        return (
+            <div className="row" id='products'>
+                <div className="row">
+                    <div className="col-sm-6">
+                        <div className=" card " style={{
+                            backgroundImage: `url(${circleImg}), linear-gradient(to right, ${leftColor}, ${rigthColor})`
+                        }}>
+
+
+                            <div className=''>
+                                <h1 className="featurette-heading">{title}</h1>
+                                <h2 className="lead">{subtitle}</h2>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="col-sm-6">
+                        <img src={img} width="960" height="640" />
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-sm-12">
+                        <p>
+                            {description}
+                        </p>
+                    </div>
+                </div>
             </div>
-            <hr></hr>
-            <div className="col-md-5">
-                <img src={clorador} width="960" height="640" />
-                <title>Placeholder</title>
+        )
 
-            </div>
+    }
 
-            <p>Consultar precio</p>
-        </div>
-    )
 }
+export default Products;
