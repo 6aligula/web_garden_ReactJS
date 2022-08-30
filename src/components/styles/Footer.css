@@ -1,0 +1,23 @@
+footer {
+    /* background-color: #d8ed738f !important; */
+}
+
+a {
+    /* background-color: powderblue; */
+    transition: background-color .5s;
+}
+
+a:hover {
+    background-color: gold;
+}
+
+i.bi.bi-instagram {
+    color: rgb(255, 0, 180);
+}
+i.bi.bi-whatsapp {
+    color: rgb(0, 255, 123);
+}
+i.bi.bi-envelope {
+    color: rgb(255, 187, 123);
+}
+

@@ -2,6 +2,7 @@ import React from "react";
 import ProductsLists from "../components/ProductsLists";
 import CarouselDady from '../components/CarouselDady';
 import NavigationBar from '../components/NavigationBar';
+import Footer from '../components/Footer';
 //import 'bootstrap/dist/css/bootstrap.css';
 
 class Main extends React.Component {
@@ -37,7 +38,7 @@ class Main extends React.Component {
                 "title": "Tricomplet Granulado",
                 "subtitle": "Venta y entrega a domicilio a particulares o empresas",
                 "description": "Ahora tiempo y dinero con este producto que contiene Cloro, Algicida y floculante",
-                "img": "http://localhost/img/tricomplet.JPG",
+                "img": "https://firebasestorage.googleapis.com/v0/b/web-papa-de84a.appspot.com/o/tricomplet.JPG?alt=media&token=29d8ed69-703f-444a-848d-9d089121096f",
                 "leftColor": "#68b38400",
                 "rightColor": "#74c0c62b"
             }]
@@ -45,12 +46,15 @@ class Main extends React.Component {
     }
     render() {
         return (
-            <div>
-                <NavigationBar/>
+            <div className="grid-layout">
+                <NavigationBar
+                    name="Ofertas" path="./ofertas" />
+                <br></br>
                 <CarouselDady />
-                <hr></hr>
+                <br></br>
                 <ProductsLists
                     products={this.state.data} />
+                <Footer />
             </div>
         )
     }

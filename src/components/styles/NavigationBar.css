@@ -1,4 +1,21 @@
 #logo {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+/*fixed de navigation bar to the top*/
+.fixed-top {
+    position: sticky;
+    top: 10px;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+#navibar {
+    /* padding-bottom: 11rem; */
+    /* position: -webkit-sticky; */
+    /* position: sticky;
+    top: 10px; */
+    /* background-color: black; */
 }

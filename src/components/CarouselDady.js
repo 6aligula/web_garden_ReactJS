@@ -6,15 +6,13 @@ import naturalGrassF from "../img/carusel/cespedNaturalMedio.png";
 import naturalGrassM from "../img/carusel/cespedNaturalFinal.png";
 import yardBefore from "../img/carusel/patioAntes.png";
 import yardAfter from "../img/carusel/patioDespues.png";
-import palletBefore from "../img/carusel/tarimaAntes.png";
-import palletFinal from "../img/carusel/tarimaFinal.png";
-import electrolysis from "../img/carusel/electrolisis.png"
+import './styles/Carro.css'
 
 
 export default function CarouselDady() {
 
     return (
-        <div id='carro'>
+        <div id='car' className='box'>
             <Carousel>
                 <Carousel.Item>
                     <img
@@ -23,7 +21,7 @@ export default function CarouselDady() {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>EL ANTES</h3>
+                        <h3>SIN CESPED ARTIFICIAL</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -34,7 +32,7 @@ export default function CarouselDady() {
                     />
 
                     <Carousel.Caption>
-                        <h3>El DESPUES</h3>
+                        <h3>CON CESPED ARTIFICIAL</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
 
@@ -44,13 +42,10 @@ export default function CarouselDady() {
                         src={naturalGrassA}
                         alt="Third slide"
                     />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={naturalGrassM}
-                        alt="Third slide"
-                    />
+
+                    <Carousel.Caption>
+                        <h3>SIN CESPED NATURAL</h3>
+                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
@@ -58,6 +53,19 @@ export default function CarouselDady() {
                         src={naturalGrassF}
                         alt="Third slide"
                     />
+                    <Carousel.Caption>
+                        <h3>COLOCANDO CESPED NATURAL</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={naturalGrassM}
+                        alt="Third slide"
+                    />
+                    <Carousel.Caption>
+                        <h3>CON CESPED NATURAL</h3>
+                    </Carousel.Caption>
                 </Carousel.Item>
 
                 <Carousel.Item>
@@ -71,29 +79,6 @@ export default function CarouselDady() {
                     <img
                         className="d-block w-100"
                         src={yardAfter}
-                        alt="Third slide"
-                    />
-                </Carousel.Item>
-
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={palletBefore}
-                        alt="Third slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={palletFinal}
-                        alt="Third slide"
-                    />
-                </Carousel.Item>
-
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={electrolysis}
                         alt="Third slide"
                     />
                 </Carousel.Item>

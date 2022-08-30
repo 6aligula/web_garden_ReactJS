@@ -29,15 +29,15 @@ class Products extends React.Component {
             leftColor,
             rigthColor } = this.props
         return (
-            <div className="row" id='products'>
-                <div className="row">
-                    <div className="col-sm-6">
+            <div className="row products" >
+                <div className="row tsid">
+                    <div className="col-sm-12">
                         <div className=" card " style={{
                             backgroundImage: `url(${circleImg}), linear-gradient(to right, ${leftColor}, ${rigthColor})`
                         }}>
 
 
-                            <div className=''>
+                            <div className='subtitle'>
                                 <h1 className="featurette-heading">{title}</h1>
                                 <h2 className="lead">{subtitle}</h2>
                             </div>
@@ -45,13 +45,13 @@ class Products extends React.Component {
                         </div>
                     </div>
 
+                </div>
+
+                <div className="row tsid">
                     <div className="col-sm-6">
                         <img src={img} width="960" height="640" />
                     </div>
-                </div>
-
-                <div className="row">
-                    <div className="col-sm-12">
+                    <div className="col-sm-6 description">
                         <p>
                             {description}
                         </p>
