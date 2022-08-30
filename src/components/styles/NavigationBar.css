@@ -11,7 +11,14 @@
     left: 0;
     z-index: 1030;
 }
+#faqs_button{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
 
+/* #ofert_button{
+    padding-bottom: 10px;
+} */
 #navibar {
     /* padding-bottom: 11rem; */
     /* position: -webkit-sticky; */

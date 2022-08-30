@@ -21,12 +21,20 @@ const NavigationBar = (props) => {
             <header>
                 <nav className="navbar navbar-dark bg-dark" >
                     <div className="container-fluid">
-                        <div type="button" className="navbar-brand" onClick={to_up}><img id='logo' src={logo} width="10px" height="10px"></img> Jardineria Marcos</div>
-                        <button onClick={to_up} className="btn btn-outline-info ir-arriba"  >Inicio</button>
-                        <Link className="btn btn-outline-warning" to={props.path}>{props.name}</Link>
+                        <div type="button" className="navbar-brand" onClick={to_up}>
+                            <img id='logo' src={logo} width="10px" height="10px"></img> Jardineria Marcos
+                        </div>
+                        <div>
+                            <button onClick={to_up} className="btn btn-outline-info ir-arriba"  >Inicio</button>
+                        </div>
+                        <div id='ofert_button'>
+                            <Link className="btn btn-outline-warning" to={props.path}>{props.name}</Link>
+                        </div>
                     </div>
                     <div className="container-fluid">
-                        <Link className="btn btn-primary" type='button' to='./faqs'>Dudas comunes</Link>
+                        <div id='faqs_button'>
+                            <Link className="btn btn-primary" type='button' to='./faqs'>Dudas comunes</Link>
+                        </div>
 
                         <form className="d-flex">
                             <input className="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Search" />
