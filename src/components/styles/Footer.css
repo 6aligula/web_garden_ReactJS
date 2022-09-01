@@ -22,6 +22,7 @@ i.bi.bi-envelope {
 
 i.bi.bi-arrow-up-circle-fill {
     font-size: 30px;
+
 }
 
 
@@ -35,21 +36,10 @@ i.bi.bi-arrow-up-circle-fill {
     color: blue;
 }
 
-
-/* Container of X */
-.container {
-    position: fixed;
-    bottom: 20px;
-    left: 80%;
-}
-
-.container-redes a,
 .btn-mas {
-    display: block;
     /* background-color: blue; */
     line-height: 55px;
-    /* border-radius: 50%; */
-    /* text-align: center; */
+
 }
 
 /*modifiy and adjust botton X and +*/
@@ -71,8 +61,10 @@ i.bi.bi-arrow-up-circle-fill {
 }
 
 #btn-mas:checked~.btn-mas {
-    -webkit-transform: rotateY(35deg);
     transition: 1s ease-in-out;
+    color: green;
+    padding: 25px;
+    /* -webkit-transform: rotate(90deg); */
 }
 
 /* design botton whatsapp */
@@ -80,6 +72,8 @@ i.bi.bi-arrow-up-circle-fill {
     opacity: 1;
     visibility: visible;
     animation: efecto 1.2s infinite;
+    position: fixed;
+    right: 20px;
 
     background-color: #2e6329;
     border: 1px solid #fff;
@@ -87,12 +81,26 @@ i.bi.bi-arrow-up-circle-fill {
     width: 60px;
     z-index: 999;
     border-radius: 50%;
-    bottom: 10%;
+    bottom: 20px;
     right: 15px;
     padding: 15px;
     /* transition: ease-in-out 1s; */
     transition: all 500ms ease;
 
+}
+
+/* Container of X */
+.container {
+    /* background-color: blue; */
+    bottom: 20px;
+    position: fixed;
+    width: 60px;
+    z-index: 999;
+    border-radius: 50%;
+    bottom: 70px;
+    right: 10px;
+    padding: 15px;
+    /* max-width: min-content; */
 }
 
 #btn-mas:checked~.container-redes a {
