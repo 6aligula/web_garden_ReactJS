@@ -5,13 +5,36 @@ import icono from '../img/icono.png'
 const Footer = () => {
     return (
         <div className='box'>
+
+            <div className='container'>
+                <input type="checkbox" id='btn-mas' />
+                <div className='btn-mas'>
+                    <label htmlFor="btn-mas" className='bi bi-x-circle-fill'></label>
+                </div>
+                <div className='container-redes'>
+                    <p>
+                        <a href="https://api.whatsapp.com/send?phone=+34650337278" target="_blank">
+                            <img className="boton" src={icono} alt="" />
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            {/* <input type="checkbox" id='close' />
+
+            <div className='container'>
+                <div className='close'>
+                    <label htmlFor="close" className='bi bi-x-circle-fill'></label>
+                </div>
+            </div>
             <div className='container-boton'>
                 <p>
                     <a href="https://api.whatsapp.com/send?phone=650337278" target="_blank">
                         <img className="boton" src={icono} alt="" />
                     </a>
                 </p>
-            </div>
+            </div> */}
+
 
             <footer>
                 <div className='row'>
@@ -36,6 +59,7 @@ const Footer = () => {
                     </div>
                     <div className="col-sm-6 social">
                         <p>
+                            <img></img>
                             <a href="https://www.instagram.com/jardineriamarcos/?hl=es">
                                 <i className="bi bi-instagram"></i>
                                 Instagram
@@ -49,8 +73,9 @@ const Footer = () => {
                     <div className='col-sem-12'>
                         <p>
                             <a href="#">
-                                <i className='bi bi-arrow-up-circle-fill'></i>
-                                
+                                <i className='bi bi-arrow-up-circle-fill'>
+                                </i>
+
                             </a>
                         </p>
                     </div>
