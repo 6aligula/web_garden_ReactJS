@@ -1,11 +1,11 @@
 import { Carousel } from 'react-bootstrap';
-import grassBefore from "../img/carusel/cespedAntes.png";
-import grassAfter from "../img/carusel/cespedDespues.png";
-import naturalGrassA from "../img/carusel/cespedNaturalA.png";
-import naturalGrassF from "../img/carusel/cespedNaturalMedio.png";
-import naturalGrassM from "../img/carusel/cespedNaturalFinal.png";
-import yardBefore from "../img/carusel/patioAntes.png";
-import yardAfter from "../img/carusel/patioDespues.png";
+import grassBefore from "../img/carusel/cespedAntes.jpg";
+import grassAfter from "../img/carusel/cespedDespues.jpg";
+import naturalGrassA from "../img/carusel/cespedNaturalA.jpg";
+import naturalGrassF from "../img/carusel/cespedNaturalMedio.jpg";
+import naturalGrassM from "../img/carusel/cespedNaturalFinal.jpg";
+import yardBefore from "../img/carusel/patioAntes.jpg";
+import yardAfter from "../img/carusel/patioDespues.jpg";
 import './styles/Carro.css'
 
 

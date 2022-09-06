@@ -52,8 +52,12 @@ class Main extends React.Component {
                 <br></br>
                 <CarouselDady />
                 <br></br>
+                <h1>Diseño, construcción y mantenimiento de jardines&#127796; Instalaciones de césped natural y artificial&#128170; Venta de productos de piscina con entrega a domicilio &#128667;
+                </h1>
+                <br></br>
                 <ProductsLists
                     products={this.state.data} />
+                    <hr></hr>
                 <Footer />
             </div>
         )

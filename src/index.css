@@ -1,13 +1,20 @@
 .box {
   width: 100%;
   height: auto;
-  
+
   /*For dedug design*/
   /* border: 2px solid yellow;
   background-color: brown;
   margin: 0 auto; */
   /*end to debug*/
 
+}
+
+h1 {
+  text-align: justify;
+  font-size: x-large;
+  font-family: sans-serif;
+  background-color: rgba(215, 238, 250, 0.192);
 }
 
 .grid-layout {

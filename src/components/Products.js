@@ -30,6 +30,7 @@ class Products extends React.Component {
             rigthColor } = this.props
         return (
             <div className="row products" >
+                
                 <div className="row tsid">
                     <div className="col-sm-12">
                         <div className=" card " style={{
@@ -38,8 +39,8 @@ class Products extends React.Component {
 
 
                             <div className='subtitle'>
-                                <h1 className="featurette-heading">{title}</h1>
-                                <h2 className="lead">{subtitle}</h2>
+                                <h2 className="featurette-heading">{title} </h2>
+                                <p className="lead">{subtitle}</p>
                             </div>
 
                         </div>

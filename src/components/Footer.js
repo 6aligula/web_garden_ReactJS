@@ -20,22 +20,6 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* <input type="checkbox" id='close' />
-
-            <div className='container'>
-                <div className='close'>
-                    <label htmlFor="close" className='bi bi-x-circle-fill'></label>
-                </div>
-            </div>
-            <div className='container-boton'>
-                <p>
-                    <a href="https://api.whatsapp.com/send?phone=650337278" target="_blank">
-                        <img className="boton" src={icono} alt="" />
-                    </a>
-                </p>
-            </div> */}
-
-
             <footer>
                 <div className='row'>
                     <div className="col-sm-6">
