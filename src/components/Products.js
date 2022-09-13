@@ -22,6 +22,7 @@ class Products extends React.Component {
     render() {
         /*shorcut KEY=this.props.KEY*/
         const {
+            idKey,
             title,
             subtitle,
             description,
@@ -29,7 +30,7 @@ class Products extends React.Component {
             leftColor,
             rigthColor } = this.props
         return (
-            <div className="row products" >
+            <div className="row products" id={idKey}>
                 
                 <div className="row tsid">
                     <div className="col-sm-12">

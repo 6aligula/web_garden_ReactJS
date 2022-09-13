@@ -34,3 +34,6 @@ img {
     margin-right: calc(-.5 * var(--bs-gutter-x));
     margin-left:auto;
 }
+.suggestion{
+    padding: 5px;
+}

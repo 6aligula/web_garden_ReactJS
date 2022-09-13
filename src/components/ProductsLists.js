@@ -1,13 +1,17 @@
 import React from "react";
 import Products from "./Products";
 
-const ProductsLists = ({products}) => {
+const ProductsLists = ({ products }) => {
+
     return (
         <div className="box">
+
             {products.map((product) => {
                 return (
+
                     <React.Fragment key={product.id}>
                         <Products
+                            idKey={product.id}
                             title={product.title}
                             subtitle={product.subtitle}
                             description={product.description}
