@@ -89,7 +89,7 @@ class Main extends React.Component {
     }
     render() {
         const titleArray = Object.values(this.state['data']).map(pac => pac.title);
-        // const id = Object.values(this.state['data']).map(pac => pac.id);
+        const idArray = Object.values(this.state['data']).map(pac => pac.id);
         //var titleArray = []
         //var titleArray= this.state.data.map(({ title }) => ({ title }))
         //console.log(titleArray)
@@ -107,7 +107,7 @@ class Main extends React.Component {
         return (
             <div className="grid-layout">
                 <NavigationBar
-                    name="Ofertas" path="./ofertas" title={titleArray} />
+                    name="Ofertas" path="./ofertas" title={titleArray} idKey={idArray} />
                 {/* name="Ofertas" path="./ofertas" title={title} idKey={id} /> */}
                 <br></br>
                 <CarouselDady />

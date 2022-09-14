@@ -35,10 +35,12 @@ class Ofertas extends React.Component {
         }
     }
     render() {
+        const titleArray = Object.values(this.state['data']).map(pac => pac.title);
+        const idArray = Object.values(this.state['data']).map(pac => pac.id);
         return (
             <div className="grid-layout">
-                <NavigationBar 
-                    name="ATRAS" path="../"/>
+                <NavigationBar
+                    name="ATRAS" path="../" title={titleArray} idKey={idArray}/>
                 <br></br>
                 <ProductsLists
                     products={this.state.data} />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { NavItem } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import logo from '../img/logo.png'
@@ -17,11 +17,86 @@ function to_up() {
 }
 
 /*go to product select */
-function searchProduct() {
-    var productSelect = document.getElementById('3');
+function searchProduct(searchDataId) {
+    var idSearch = searchDataId;
+    var productSelect = document.getElementById(idSearch);
     productSelect.scrollIntoView(true);
 
 }
+/*cat Id of product selected*/
+function catIdProduct() {
+    /*https://stackoverflow.com/questions/57493879/how-do-i-get-the-value-of-the-selected-item-in-a-datalist-using-pure-js */
+    const datalist = document.getElementById("products");
+    const input = document.getElementById("search");
+    // alert(Value)
+    for (var i = 0; i < datalist.options.length; i++) {
+        if (datalist.options[i].value == input.value) {
+            // obtains the data-id attribute
+            var idData=(datalist.options[i].getAttribute("data-id"));
+            console.log(idData);
+            //console.log(datalist.options[i].getAttribute("data-id"));
+            break;
+        }
+    }
+    searchProduct(idData);
+}
+
+const NavigationBar = (props) => {
+    /*useEffect is similar window.onload or document.ready*/
+    useEffect(() => {
+        var option = "";
+        var pri = '<option value = "';
+        var sec = '" ';
+        var closeOption = "'></option>";
+        var idProduct = "data-id= '";
+
+        for (const key in props.title) {
+            option += pri + `${props.title[key]}` + sec + idProduct + `${props.idKey[key]}` + closeOption;
+            // option = pri + `${props.title[key]}` + sec;
+            //console.log(option);
+        }
+        var modelList = document.getElementById("products");
+        modelList.innerHTML = option;
+
+    }, [])
+
+
+    return (
+
+        < div id='navibar' className='box fixed-top bg-dark ir-arriba' >
+
+            <header>
+                <nav className="navbar navbar-dark bg-dark" >
+                    <div className="container-fluid">
+                        <div type="button" className="navbar-brand" onClick={to_up}>
+                            <img id='logo' src={logo} width="10px" height="10px"></img> Jardineria Marcos
+                        </div>
+
+                        <div id='ofert_button'>
+                            <Link className="btn btn-outline-warning" to={props.path}>{props.name}</Link>
+                        </div>
+                    </div>
+                    <div className="container-fluid">
+                        <div id='faqs_button'>
+                            <Link className="btn btn-primary" type='button' to='./faqs'>Dudas comunes</Link>
+                        </div>
+
+                        <form className="d-flex">
+                            <input id='search' list='products' className="form-control me-2" placeholder='Buscar productos' />
+                            <datalist id='products'>
+
+                            </datalist>
+                            {/* <a className="btn btn-outline-success" onClick={searchProduct} id='buscar'>Buscar</a> */}
+                            <a className="btn btn-outline-success" onClick={catIdProduct} id='buscar'>Buscar</a>
+                        </form>
+                    </div>
+                </nav>
+            </header>
+        </div >
+
+    )
+}
+export default NavigationBar;
 
 // const applications = {
 //     "apps": [
@@ -123,65 +198,3 @@ function searchProduct() {
 
 // }
 // export default NavigationBar;
-
-
-const NavigationBar = (props) => {
-    // const {
-    //     idKey,
-    //     title,
-    //     path,
-    //     name } = this.props
-    useEffect(() => {
-        //var title = titleArray;
-        var option = "";
-
-        var pri = '<option value = "';
-        var sec = '"></option>';
-        for (const key in props.title) {
-            option += pri + `${props.title[key]}` + sec;
-            // option = pri + `${props.title[key]}` + sec;
-            console.log(option);
-        }
-        var modelList = document.getElementById("products");
-        modelList.innerHTML = option;
-
-    }, [])
-
-
-    return (
-
-        < div id='navibar' className='box fixed-top bg-dark ir-arriba' >
-
-            <header>
-                <nav className="navbar navbar-dark bg-dark" >
-                    <div className="container-fluid">
-                        <div type="button" className="navbar-brand" onClick={to_up}>
-                            <img id='logo' src={logo} width="10px" height="10px"></img> Jardineria Marcos
-                        </div>
-
-                        <div id='ofert_button'>
-                            <Link className="btn btn-outline-warning" to={props.path}>{props.name}</Link>
-                        </div>
-                    </div>
-                    <div className="container-fluid">
-                        <div id='faqs_button'>
-                            <Link className="btn btn-primary" type='button' to='./faqs'>Dudas comunes</Link>
-                        </div>
-
-                        <form className="d-flex">
-                            {/* <label htmlFor='search'> </label> */}
-                            <input id='search' list='products' className="form-control me-2" type="search" placeholder='Buscar productos' />
-                            <datalist id='products'>
-
-                            </datalist>
-                            {/* <button className="btn btn-outline-success" onClick={searchProduct} >Buscar</button> */}
-                            <a className="btn btn-outline-success" onClick={searchProduct} id='buscar'>Buscar</a>
-                        </form>
-                    </div>
-                </nav>
-            </header>
-        </div >
-
-    )
-}
-export default NavigationBar;
