@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Ofertas from './pages/Ofertas';
 import Main from './pages/Main';
 import NotFound from './pages/NotFound';
@@ -24,7 +24,9 @@ const App = () => {
   // const [value, setValue]= useState("");
   // const [titleSelect, setTitleSelect ]= useState({});
   return (
-      <BrowserRouter>
+    <div>
+
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/main" element={<Main />} />
@@ -36,8 +38,23 @@ const App = () => {
           <Route path="/faqs" element={<Faqs />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    
+      </HashRouter>
+      {/* <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/main" element={<Main />} />
+          <Route path="/main/ofertas" element={<Ofertas />} />
+          <Route path="/ofertas" element={<Ofertas />} />
+          <Route path="/main/faqs" element={<Faqs />} />
+          <Route path="/ofertas/faqs" element={<Faqs />} />
+          <Route path="/main/ofertas/faqs" element={<Faqs />} />
+          <Route path="/faqs" element={<Faqs />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </BrowserRouter> */}
+    </div>
+
+
   )
 }
 
