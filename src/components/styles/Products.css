@@ -4,6 +4,13 @@
     /* width: 400px; */
     width: 100%;
     /* background: url('../../img/circles.png') no-repeat, linear-gradient(to right, #68b38400, #74c0c600);  */
+    margin: 0;
+    background: linear-gradient(to right, #e0f2f1, #ffffff);
+    display: flex;
+    color: #00695c;
+    font-size: 24px;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
 .products {
