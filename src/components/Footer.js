@@ -1,6 +1,7 @@
 import React from 'react'
 import './styles/Footer.css'
 import icono from '../img/icono.png'
+import AppDownloadCTA from './AppDownloadCTA'
 
 const Footer = () => {
     return (
@@ -11,6 +12,7 @@ const Footer = () => {
                 <div className='btn-mas'>
                     <label htmlFor="btn-mas" className='bi bi-x-circle-fill'></label>
                 </div>
+
                 <div className='container-redes'>
                     <p>
                         <a href="https://api.whatsapp.com/send?phone=+34650337278" target="_blank">
@@ -18,8 +20,10 @@ const Footer = () => {
                         </a>
                     </p>
                 </div>
-            </div>
 
+                {/* <AppDownloadCTA/> */}
+            </div>
+            <AppDownloadCTA/>
             <footer>
                 <div className='row'>
                     <div className="col-sm-6">

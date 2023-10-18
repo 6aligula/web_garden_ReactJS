@@ -1,0 +1,84 @@
+.logo-container {
+    width: 150px;
+    /* Puedes ajustar esto según el tamaño que quieras para la imagen en tu página */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    padding-top: 20px;
+
+}
+
+/* Estilos para la imagen */
+.logo-container img {
+    max-width: 70%;
+    /* Asegura que la imagen no exceda el tamaño de su contenedor */
+    height: auto;
+    border-radius: 200px;
+}
+
+/* Si quieres agregar algún texto debajo de la imagen, puedes usar esta clase */
+.text-below-logo {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding: 5px 10px; /* Añade un poco de espacio alrededor del texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    border-radius: 8px; 
+}
+
+.left-floating-button {
+    position: fixed;
+    bottom: 20px;
+    left: 1px;
+    z-index: 999;
+    /* Asegúrate de que esté siempre en primer plano */
+}
+
+/* .close-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+} */
+
+.close-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: #ffffff; /* Color blanco para la 'x' */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* Animación de pulso */
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.logo-container img {
+    animation: pulseAnimation 1s infinite;
+}

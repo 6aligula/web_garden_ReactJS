@@ -115,19 +115,6 @@ class Main extends React.Component {
     render() {
         const titleArray = Object.values(this.state['data']).map(pac => pac.title);
         const idArray = Object.values(this.state['data']).map(pac => pac.id);
-        //var titleArray = []
-        //var titleArray= this.state.data.map(({ title }) => ({ title }))
-        //console.log(titleArray)
-        //alert(title);
-
-        // let title = []
-        // let item=0;
-        // let array = this.state.data;
-        // for (item of array) {
-        //     title.push(item.title);
-        // }
-        // console.log(title);
-
 
         return (
             <div className="grid-layout">
