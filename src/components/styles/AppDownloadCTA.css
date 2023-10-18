@@ -23,12 +23,25 @@
 .text-below-logo {
     text-align: center;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 15px;
     letter-spacing: 1px;
     color: #ffffff;
     padding: 5px 10px; /* Añade un poco de espacio alrededor del texto */
     background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
     border-radius: 8px; 
+}
+
+.download-icon {
+    position: absolute;
+    bottom: 10px; /* Puedes ajustar esto según dónde quieras que aparezca el ícono */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el ícono horizontalmente */
+    font-size: 24px; /* Ajusta el tamaño del ícono */
+    color: #fff; /* Color blanco para el ícono */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .left-floating-button {
@@ -38,18 +51,6 @@
     z-index: 999;
     /* Asegúrate de que esté siempre en primer plano */
 }
-
-/* .close-button {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background-color: #fff;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 5px 10px;
-} */
 
 .close-button {
     position: absolute;

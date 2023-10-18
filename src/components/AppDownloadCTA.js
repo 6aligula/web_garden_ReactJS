@@ -12,8 +12,9 @@ const AppDownloadCTA = () => {
             <button className="close-button" onClick={() => setIsVisible(false)}>x</button>
             <a href="https://play.google.com/store/apps/details?id=com.jmjardiners&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
                 <img src={playStore} alt="Descargar en Play Store" />
+                <p className='text-below-logo'>¡Descarga nuestra app móvil!</p>
             </a>
-            <p className='text-below-logo'>¡Descarga nuestra app móvil!</p>
+            {/* <p className='text-below-logo'>¡Descarga nuestra app móvil!</p> */}
         </div>
     );
 }
